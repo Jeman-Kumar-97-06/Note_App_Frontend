@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #F6EACB;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.main-title {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar_comp{
+  background-color: #D1E9F6;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:20px;
+}
+
+.navbar_comp a {
+  text-decoration: none;
+  color:black;
+}
+
+.nav2_2 a {
+  margin:20px;
+}
+
+.new_note{
+  margin-left:20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  h3{
+    font-size: larger;
+
+  }
+}
+.new_note textarea ,.new_note input{
+  padding:8px;
+  font-size: larger;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+}
+
+.new_note label{
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 80px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  margin-right : 10px;
+  border-style: solid;
+  border-color: black;
+  font-size: large;
+  cursor: pointer;
+  box-shadow: 3px 3px 2px gray;
+  position: relative;
+}
+
+button:active{
+  left:3px;
+  top:3px;
+  box-shadow: none;
+}
+
+.new_note button{
+  background-color: #C1D8C3;
+}
+
+.del_note_btn{
+  background-color: rgb(231, 118, 118);
+  width:50px;
+  border-radius: 3px;
+}
+
+.ur_notes{
+  margin-left:20px;
+}
+
+.all_notes{
+  width:100vw;
+  margin-left:20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nt_det{
+  max-width:450px;
+  background-color: #F7F7F8;
+  padding:25px;
+  border-radius: 10px;
+  margin:25px 25px 25px 0px;
+  box-shadow: 4px 4px 10px gray;
+}
+
+p:focus, h4:focus{
+  outline:none;
+  border: none;
+}
+
+.nt_det input, .nt_det textarea{
+  border:none;
+  outline:none;
+  text-decoration: none;
+  background-color: #F7F7F8;
+}
+
+.nt_det input {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.nt_det textarea{
+  font-size: x-large;
+  resize:none;
+  margin-top:10px;
+  height:fit-content ;
+  min-height: 150px;
+}
+
+.login, .signup{
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.login label, .signup label {
+  margin-top: 30px;
+  font-size: larger;
+}
+
+.login input, .signup input {
+  font-size: larger;
+  margin-top: 10px;
+}
+
+.usr_email{
+  margin-right: 20px;
+}
+
+.nav1_2{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+}
+
+#profile_pic{
+  display: none;
+  width:50px;
+  height: 50px;
+}
+
+.nav2_2cont p{
+  cursor: pointer;
+}
+
+.dropdown{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width:393px) {
+  .new_note{
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+  }
+  .navbar_comp{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .nav1_2 a{
+    font-size: large;
+  }
+
+  .nav2_2cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #full_email{
+    display: none;
+  }
+
+  /* Dropdown on hover */
+  .dropdown{
+    position: relative;
+    display: inline-block;
+  }
+  /* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right:5px;
+  background-color: #D1E9F6;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+#profile_pic {
+  display: inline;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content button, .dropdown-content span {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+.login, .signup{
+  width: 95%;
+  margin-left: auto;;
+  margin-right:auto;
+}
+}
