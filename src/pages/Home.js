@@ -9,7 +9,7 @@ const Home = () => {
     const {user}           = useAuthContext();
     useEffect(()=>{
         const fetchNotes = async () => {
-            const resp = await fetch('/api/notes',{headers:{'Authorization':`Bearer ${user.token}`}});
+            const resp = await fetch('https://my-projects-9biz.onrender.com/api/notes',{headers:{'Authorization':`Bearer ${user.token}`}});
             const json = await resp.json()
             if(resp.ok){
                 dispatch({type:"SET_NOTES",payload:json})

@@ -11,7 +11,7 @@ export const useSignup = () => {
         setIsloading(true);
         setError(null);
         //sending a request to server to signup a user
-        const response = await fetch('/api/users/signup',{method:'POST',
+        const response = await fetch('https://my-projects-9biz.onrender.com/api/users/signup',{method:'POST',
                                                           headers:{'Content-Type':'application/json'},
                                                           body:JSON.stringify({email,password})});
         const json     = await response.json();

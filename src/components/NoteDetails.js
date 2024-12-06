@@ -18,7 +18,7 @@ const NoteDetails = ({nt}) => {
             setError("You must be logged in")
             return;
         }
-        const resp = await fetch('/api/notes/'+nt._id,{method:'DELETE',headers:{'Authorization':`Bearer ${user.token}`}});
+        const resp = await fetch('https://my-projects-9biz.onrender.com/api/notes/'+nt._id,{method:'DELETE',headers:{'Authorization':`Bearer ${user.token}`}});
         const json = await resp.json();
         if(resp.ok){
             dispatch({type:"DELETE_NOTE",payload:json})
@@ -32,7 +32,7 @@ const NoteDetails = ({nt}) => {
             return;
         }
         const update_n = {_id:nt._id,title,body};
-        const resp     = await fetch(`/api/notes/${nt._id}`,{method:"PATCH",body:JSON.stringify(update_n),headers:{'Content-Type':'application/json','Authorization':`Bearer ${user.token}`}});
+        const resp     = await fetch(`https://my-projects-9biz.onrender.com/api/notes/${nt._id}`,{method:"PATCH",body:JSON.stringify(update_n),headers:{'Content-Type':'application/json','Authorization':`Bearer ${user.token}`}});
         const json     = await resp.json();
         if(!resp.ok){
              setError(json.error);

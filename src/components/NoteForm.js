@@ -19,7 +19,7 @@ const NoteForm = () => {
         }
 
         const new_note = {title,body};
-        const resp     = await fetch('/api/notes',{method:"POST",
+        const resp     = await fetch('https://my-projects-9biz.onrender.com/api/notes',{method:"POST",
                                                    body:JSON.stringify(new_note),
                                                    headers:{'Content-Type':'application/json','Authorization':`Bearer ${user.token}`}});
         const json     = await resp.json();
